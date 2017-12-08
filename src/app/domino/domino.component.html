@@ -1,0 +1,123 @@
+<div class="wrap">
+  <div class="top-opts">
+    <button mat-icon-button (click)="rotateLeft()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button mat-button (click)="reset()">New</button>
+    <button mat-icon-button (click)="rotateRight()">
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+
+  <div class="row">
+    <div class="domino-wrap col-md-10">
+      <div class="domino-area">
+        <div class="domino" id="domino" [style.transition-duration]="speed" [style.width]="size" [style.transform]="rotation">
+          <div id="domino-top" class="domino-face domino-four" (click)="pickFace('domino-top')" [style.width]="size" [style.height]="size">
+            <div class="one"></div>
+            <div class="gap"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+            <div class="five"></div>
+            <div class="six"></div>
+            <div class="gap"></div>
+            <div class="seven"></div>
+          </div>
+          <div class="line"></div>
+          <div id="domino-bottom" class="domino-face domino-one" (click)="pickFace('domino-bottom')" [style.width]="size" [style.height]="size">
+            <div class="one"></div>
+            <div class="gap"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+            <div class="five"></div>
+            <div class="six"></div>
+            <div class="gap"></div>
+            <div class="seven"></div>
+          </div>
+        </div>
+      </div>
+      <div class="opts">
+
+        <label for="size">Size</label>
+        <mat-slider (change)="setSize($event)" min="50" max="120" value="100"></mat-slider>
+        <br>
+        <label for="speed" >Speed</label>
+        <mat-slider (change)="setSpeed($event)" min="0.1" max="5" step="0.1" value="1"></mat-slider>
+      </div>
+    </div>
+    <div class="faces col-md-2">
+      <div class="domino-item domino-one" (click)="setFace(1)">
+        <div class="one"></div>
+        <div class="gap"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+        <div class="six"></div>
+        <div class="gap"></div>
+        <div class="seven"></div>
+      </div>
+      <div class="domino-item domino-two" (click)="setFace(2)">
+        <div class="one"></div>
+        <div class="gap"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+        <div class="six"></div>
+        <div class="gap"></div>
+        <div class="seven"></div>
+      </div>
+      <div class="domino-item domino-three" (click)="setFace(3)">
+        <div class="one"></div>
+        <div class="gap"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+        <div class="six"></div>
+        <div class="gap"></div>
+        <div class="seven"></div>
+      </div>
+      <div class="domino-item domino-four" (click)="setFace(4)">
+        <div class="one"></div>
+        <div class="gap"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+        <div class="six"></div>
+        <div class="gap"></div>
+        <div class="seven"></div>
+      </div>
+      <div class="domino-item domino-five" (click)="setFace(5)">
+        <div class="one"></div>
+        <div class="gap"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+        <div class="six"></div>
+        <div class="gap"></div>
+        <div class="seven"></div>
+      </div>
+      <div class="domino-item domino-six" (click)="setFace(6)">
+        <div class="one"></div>
+        <div class="gap"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+        <div class="six"></div>
+        <div class="gap"></div>
+        <div class="seven"></div>
+      </div>
+            
+    </div>
+  </div>
+
+
+
+</div>
